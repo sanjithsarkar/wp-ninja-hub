@@ -1,0 +1,9 @@
+{
+    "name": "wpmanageninja/unified-dashboard",
+    "description": "Unified Dashboard for WPManageNinja plugins",
+    "autoload": {
+        "psr-4": {
+            "WPNinjaDashboard\\": "src/"
+        }
+    }
+}
