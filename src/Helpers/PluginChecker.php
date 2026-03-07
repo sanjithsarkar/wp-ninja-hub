@@ -1,6 +1,6 @@
 <?php
 
-namespace WPNinjaDashboard\Helpers;
+namespace WPNinjaHub\Helpers;
 
 class PluginChecker
 {

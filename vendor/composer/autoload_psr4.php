@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WPNinjaDashboard\\' => array($baseDir . '/src'),
+    'WPNinjaHub\\' => array($baseDir . '/src'),
 );

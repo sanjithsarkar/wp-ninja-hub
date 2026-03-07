@@ -1,9 +1,9 @@
 {
-    "name": "wpmanageninja/unified-dashboard",
-    "description": "Unified Dashboard for WPManageNinja plugins",
+    "name": "wp-ninja-hub/wp-ninja-hub",
+    "description": "Unified dashboard for WPManageNinja plugins (WP Ninja Hub)",
     "autoload": {
         "psr-4": {
-            "WPNinjaDashboard\\": "src/"
+            "WPNinjaHub\\": "src/"
         }
     }
 }

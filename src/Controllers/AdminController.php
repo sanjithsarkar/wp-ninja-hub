@@ -1,6 +1,6 @@
 <?php
 
-namespace WPNinjaDashboard\Controllers;
+namespace WPNinjaHub\Controllers;
 
 class AdminController
 {

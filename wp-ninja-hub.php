@@ -17,8 +17,8 @@ define('WPNINJA_HUB_URL', plugin_dir_url(__FILE__));
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use WPNinjaDashboard\Controllers\AdminController;
-use WPNinjaDashboard\Controllers\DashboardController;
+use WPNinjaHub\Controllers\AdminController;
+use WPNinjaHub\Controllers\DashboardController;
 
 add_action('plugins_loaded', function () {
     (new AdminController())->register();

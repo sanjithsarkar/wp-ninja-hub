@@ -1,13 +1,13 @@
 <?php
 
-namespace WPNinjaDashboard\Controllers;
+namespace WPNinjaHub\Controllers;
 
-use WPNinjaDashboard\Helpers\PluginChecker;
-use WPNinjaDashboard\Models\PaymatticData;
-use WPNinjaDashboard\Models\FluentFormData;
-use WPNinjaDashboard\Models\FluentCrmData;
-use WPNinjaDashboard\Models\FluentBoardData;
-use WPNinjaDashboard\Models\FluentCommunityData;
+use WPNinjaHub\Helpers\PluginChecker;
+use WPNinjaHub\Models\PaymatticData;
+use WPNinjaHub\Models\FluentFormData;
+use WPNinjaHub\Models\FluentCrmData;
+use WPNinjaHub\Models\FluentBoardData;
+use WPNinjaHub\Models\FluentCommunityData;
 
 class DashboardController
 {

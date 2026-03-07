@@ -1,8 +1,8 @@
 <?php
 
-namespace WPNinjaDashboard\Models;
+namespace WPNinjaHub\Models;
 
-use WPNinjaDashboard\Helpers\PluginChecker;
+use WPNinjaHub\Helpers\PluginChecker;
 
 class FluentBoardData
 {

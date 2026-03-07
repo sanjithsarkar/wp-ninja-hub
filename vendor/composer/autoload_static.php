@@ -9,12 +9,12 @@ class ComposerStaticInit62a8b9ea9d49ce524196ff098035e90e
     public static $prefixLengthsPsr4 = array (
         'W' =>
         array (
-            'WPNinjaDashboard\\' => 17,
+            'WPNinjaHub\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WPNinjaDashboard\\' =>
+        'WPNinjaHub\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
