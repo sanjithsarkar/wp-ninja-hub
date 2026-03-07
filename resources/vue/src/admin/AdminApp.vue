@@ -94,21 +94,30 @@
                             <span>Preview</span>
                         </div>
                     </template>
-                    <p class="card-desc" v-if="dashboardUrl">
-                        View the live dashboard on the front-end:
+                    <p class="card-desc">
+                        Preview the dashboard in two ways: on a page with the shortcode, or directly in admin without a shortcode.
                     </p>
-                    <p class="card-desc" v-else>
-                        No page found with the <code>[wp_ninja_hub]</code> shortcode. Create a page and add the shortcode to get started.
+                    <div class="preview-buttons">
+                        <el-button
+                            v-if="dashboardUrl"
+                            type="primary"
+                            @click="openShortcodePreview"
+                            plain
+                        >
+                            <el-icon style="margin-right: 4px;"><Monitor /></el-icon>
+                            Shortcode page preview
+                        </el-button>
+                        <el-button
+                            type="primary"
+                            @click="openDirectPreview"
+                        >
+                            <el-icon style="margin-right: 4px;"><View /></el-icon>
+                            Direct preview (admin)
+                        </el-button>
+                    </div>
+                    <p class="card-desc card-desc-hint" v-if="!dashboardUrl">
+                        No page found with <code>[wp_ninja_hub]</code>. Create a page and add the shortcode to use "Shortcode page preview".
                     </p>
-                    <el-button
-                        v-if="dashboardUrl"
-                        type="primary"
-                        @click="openDashboard"
-                        plain
-                    >
-                        <el-icon style="margin-right: 4px;"><Monitor /></el-icon>
-                        Open Dashboard
-                    </el-button>
                 </el-card>
             </el-col>
         </el-row>
@@ -117,7 +126,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { DocumentCopy, Connection, InfoFilled, Loading, Monitor } from '@element-plus/icons-vue';
+import { DocumentCopy, Connection, InfoFilled, Loading, Monitor, View } from '@element-plus/icons-vue';
 
 const config = window.wpNinjaHub || {};
 const shortcode = ref('[wp_ninja_hub]');
@@ -125,6 +134,7 @@ const copied = ref(false);
 const plugins = ref([]);
 const loading = ref(true);
 const dashboardUrl = ref(config.dashboardUrl || '');
+const directPreviewUrl = ref(config.directPreviewUrl || '');
 
 function copyShortcode() {
     const text = shortcode.value;
@@ -155,8 +165,12 @@ function copyShortcode() {
     }
 }
 
-function openDashboard() {
+function openShortcodePreview() {
     window.open(dashboardUrl.value, '_blank');
+}
+
+function openDirectPreview() {
+    window.open(directPreviewUrl.value, '_blank');
 }
 
 function pluginTagType(slug) {
@@ -265,5 +279,18 @@ onMounted(async () => {
 
 .plugin-item {
     display: inline-block;
+}
+
+.preview-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.card-desc-hint {
+    margin-bottom: 0;
+    margin-top: 12px;
+    font-size: 13px;
 }
 </style>
