@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-vendor/
 
 # Build output (run `npm run build` on deploy)
 assets/dist/
